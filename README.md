@@ -16,9 +16,15 @@ Hatches to "teleport" to the basements are under the Special category. I may cha
 HOW IT WORKS
 
 • Under Special you will find 10 new basement hatches, one for each unique basement. They require 10 metal, 10 wood, 10 concrete, to give the effect of "crafting" the basement, even though you're just crafting a "teleport" door to get in.
+
 • Place a hatch anywhere on the ground of your Settlement. I like to place these behind the house, or in a settlement bedroom.
+
 • Open it up like any door, and you're now in the interior basement cell!
+
 • Enter into Workshop Mode to scrap the interior, and begin decorating it how you like!
+
 • Only one door to each basement can exist at a given time, so if you craft a second door to the same exact basement, the old one will just move to your location, and you will be notified where it moved from. See video for details.
+
 • The interior cell will remain 100% the same as you left it, so you can move the entrance doors around to any settlements with no issues or effects to the interiors.
+
 • NOTE: Currently, if you are over-encumbered, you can't enter into the basement because this mod uses the fast travel system to cleanly move companions with you indoors (it's messy to manage manually.)  I'm working on a solution.  For now, just dump your stuff in the main Workshop before going into a basement ya dingus! :P
