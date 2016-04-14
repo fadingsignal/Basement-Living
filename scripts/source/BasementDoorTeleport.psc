@@ -5,19 +5,23 @@ ScriptName BasementDoorTeleport extends ObjectReference
 ;version 1.2
 ;fadingsignalmods@gmail.com
 
-;-- Properties ------------------------------------
-ObjectReference property DestinationMarker Auto
-ObjectReference Property ReturnDoor Auto
-Keyword Property LinkedRefDoorKeyword Auto
+
 
 workshopparentscript Property WorkshopParent Auto mandatory
+
+;-- Properties ------------------------------------
+
+ObjectReference property DestinationMarker Auto
+ObjectReference Property ReturnDoor Auto
+
+ObjectReference Property WorkshopMain Auto ;the physical workshop in the basement
+ObjectReference Property WorkshopContainerDefault Auto ;the container the workshop is linked to
+
+Keyword Property LinkedRefDoorKeyword Auto
+Keyword Property WorkshopLinkContainerKeyword Auto
+
 Message Property TestMessage Auto
 GlobalVariable Property BasementExists Auto
-
-;placeholder properties since adding them is so hard in xEdit
-Bool Property Property04 Auto
-Bool Property Property05 Auto
-Bool Property Property06 Auto
 
 int countertest = 0
 
@@ -54,7 +58,38 @@ Function OnInit()
 		
 	;Set the linked reference between this NEW door and the ladder
 	ReturnDoor.SetLinkedRef(Self, LinkedRefDoorKeyword)
-		
+	
+	;Link the container in the basement to the workshop where this door was placed
+	LinkToParentWorkshop()
+	
+EndFunction
+
+;New in v1.3, automatically link to the workshop where the basement door is placed so the containers are shared
+Function LinkToParentWorkshop()
+	;debug.Notification("Attempting to link workshop")
+	
+	;This is the reference to the ladder in the basement itself which we use to traverse the parent locations to get the workshop
+	
+	;Get the location of where the door was just placed
+	Location currentLocation = Self.GetCurrentLocation()
+	
+	;Get the reference for the Workshop in this Location
+	workshopscript workshopREF = WorkshopParent.GetWorkshopFromLocation(currentLocation)
+	
+	;Grab the reference of the actual container attached to the Workshop
+	ObjectReference parentContainerRef = workshopREF.GetContainer()
+
+	;If we successfully grabbed the parent workshop container, continue
+	;Consider an Else condition that will re-attach the default container to avoid having NO container
+	If(parentContainerRef)
+		;debug.Notification("Parent container found, linking...")
+		debug.Trace("Parent Settlement container found, linking to basement...", 0)
+		WorkshopMain.SetLinkedRef(None, WorkshopLinkContainerKeyword) ;clear out the current ref to be safe
+		WorkshopMain.SetLinkedRef(parentContainerREF, WorkshopLinkContainerKeyword) ;add the ref of the parent container
+	Else
+		debug.Trace("Could not reach Settlement container, retaining previous container.", 0)
+	EndIf
+	
 EndFunction
 
 Function OnWorkshopObjectPlaced(ObjectReference akReference)
