@@ -26,5 +26,3 @@ HOW IT WORKS
 • Only one door to each basement can exist at a given time, so if you craft a second door to the same exact basement, the old one will just move to your location, and you will be notified where it moved from. See video for details.
 
 • The interior cell will remain 100% the same as you left it, so you can move the entrance doors around to any settlements with no issues or effects to the interiors.
-
-• NOTE: Currently, if you are over-encumbered, you can't enter into the basement because this mod uses the fast travel system to cleanly move companions with you indoors (it's messy to manage manually.)  I'm working on a solution.  For now, just dump your stuff in the main Workshop before going into a basement ya dingus! :P
