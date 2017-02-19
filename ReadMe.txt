@@ -3,7 +3,7 @@ BasementLiving - Placeable Bunkers and Basements for Fallout 4
 
 Ever wanted to take a break from the outside world, have a pause from the weather (and settlers?) Ever wanted to store your weapons, Power Armor, and other items in a secure space where they will be left alone? Look no further.
 
-Basement Living adds 10 completely standalone basements & bunkers (interior cells) each with their own standalone workshops and craftable door hatches, allowing you to place/enter into them from any settlement you choose. They work just like Home Plate, so you can tear-down and decorate them however you like! This was done carefully, and methodically, and does not alter ANY existing settlements or interiors whatsoever, nor does it require any batch files, god mode, or other workarounds. They're mostly copies of vanilla cells, so you may recognize a few. I found a couple cool unused cells and copied those too, adding a few things and lighting touches.
+Basement Living adds 10 completely standalone basements & bunkers (interior cells) each with their own workshops that automatically link to the workshop of the settlement they're crafted in, and craftable door hatches, allowing you to place/enter into them from any settlement you choose. They work just like Home Plate, so you can tear-down and decorate them however you like! This was done carefully, and methodically, and does not alter ANY existing settlements or interiors whatsoever, nor does it require any batch files, god mode, or other workarounds. They're mostly copies of vanilla cells, so you may recognize a few. I found a couple cool unused cells and copied those too, adding a few things and lighting touches.
 
 Every interior features a fusebox with 100 power, and a control panel to disable/enable the default lighting, fog effects, and trash/debris!  It may not seem like it, but this was three weeks of work to get all the elements set up and working (including replacing lots of floors and walls!) **WHEW!**
 
@@ -27,4 +27,3 @@ HOW IT WORKS
 
 • The interior cell will remain 100% the same as you left it, so you can move the entrance doors around to any settlements with no issues or effects to the interiors.
 
-• NOTE: Currently, if you are over-encumbered, you can't enter into the basement because this mod uses the fast travel system to cleanly move companions with you indoors (it's messy to manage manually.)  I'm working on a solution.  For now, just dump your stuff in the main Workshop before going into a basement ya dingus! :P
